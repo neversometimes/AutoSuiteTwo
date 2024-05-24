@@ -1,20 +1,15 @@
 package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.slf4j.Logger;
-import org.testng.annotations.*;
-
-import static org.testng.Assert.*;
-
-import static java.lang.invoke.MethodHandles.lookup;
-import static org.slf4j.LoggerFactory.getLogger;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 
@@ -23,16 +18,17 @@ public class BaseTests {
     protected WebDriver driver;
 
     @BeforeSuite
-    public void setupClass() {
+    void setupClass() {
         WebDriverManager.edgedriver().setup();
         WebDriverManager.firefoxdriver().setup();
         WebDriverManager.safaridriver().setup();
         WebDriverManager.chromedriver().setup();
     }
 
-    @BeforeTest
+    @BeforeMethod
     @Parameters("browser")
     public void setup(String browser) throws Exception {
+
         if (browser.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
@@ -45,13 +41,12 @@ public class BaseTests {
             throw new Exception("Incorrect Browser");
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterTest
+    @AfterMethod
     public void teardown() {
         driver.quit();
     }
-
-} // end class
+}
