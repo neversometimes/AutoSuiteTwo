@@ -1,15 +1,14 @@
 package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
@@ -25,7 +24,7 @@ public class BaseTests {
         WebDriverManager.chromedriver().setup();
     }
 
-    @BeforeMethod
+    @BeforeTest
     @Parameters("browser")
     public void setup(String browser) throws Exception {
 
@@ -41,11 +40,12 @@ public class BaseTests {
             throw new Exception("Incorrect Browser");
         }
 
+        //driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterMethod
+    @AfterTest
     public void teardown() {
         driver.quit();
     }
