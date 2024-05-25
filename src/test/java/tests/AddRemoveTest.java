@@ -1,13 +1,8 @@
 package tests;
 
 import base.BaseTests;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import pages.AddRemovePage;
-
-import java.time.Duration;
-
 import static org.testng.Assert.*;
 
 public class AddRemoveTest extends BaseTests {
@@ -27,7 +22,5 @@ public class AddRemoveTest extends BaseTests {
         assertFalse(arPage.checkDeleteButtonState());
 
     }
-
-
 
 }

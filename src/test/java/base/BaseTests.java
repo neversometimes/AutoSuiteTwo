@@ -24,9 +24,9 @@ public class BaseTests {
     }
 
     @BeforeTest
-    //@Parameters("browser")
-    public void setup() throws Exception {
-/*
+    @Parameters("browser")
+    public void setup(String browser) throws Exception {
+
         if (browser.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
@@ -38,8 +38,8 @@ public class BaseTests {
         } else {
             throw new Exception("Incorrect Browser");
         }
-*/
-        driver = new ChromeDriver();
+
+        // driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
