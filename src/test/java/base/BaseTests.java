@@ -23,7 +23,7 @@ public class BaseTests {
         WebDriverManager.chromedriver().setup();
     }
 
-    @BeforeTest
+    @BeforeMethod
     @Parameters("browser")
     public void setup(String browser) throws Exception {
 
@@ -39,12 +39,13 @@ public class BaseTests {
             throw new Exception("Incorrect Browser");
         }
 
-        // driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driver = new ChromeDriver();
+
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
 
-    @AfterTest
+    @AfterMethod
     public void teardown() {
         driver.quit();
     }

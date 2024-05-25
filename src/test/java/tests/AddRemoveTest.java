@@ -12,9 +12,9 @@ public class AddRemoveTest extends BaseTests {
 
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
 
-        // click Add Element button
         AddRemovePage arPage = new AddRemovePage(driver);
 
+        // click Add Element button
         arPage.clickAddElementButton();
         assertTrue(arPage.checkDeleteButtonState());
 
