@@ -9,6 +9,9 @@ public class LoginTest extends BaseTests {
 
     @Test
     public void verifySuccessfulLogin() {
+
+        driver.get("https://www.saucedemo.com/");
+
         LoginPage loginPage = new LoginPage(driver);
         assertEquals(loginPage.login("standard_user",
                 "secret_sauce").getTitle(), "Swag Labs");

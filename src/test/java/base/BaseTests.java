@@ -1,8 +1,7 @@
 package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -25,9 +24,9 @@ public class BaseTests {
     }
 
     @BeforeTest
-    @Parameters("browser")
-    public void setup(String browser) throws Exception {
-
+    //@Parameters("browser")
+    public void setup() throws Exception {
+/*
         if (browser.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
@@ -39,10 +38,10 @@ public class BaseTests {
         } else {
             throw new Exception("Incorrect Browser");
         }
-
-        //driver = new ChromeDriver();
+*/
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://www.saucedemo.com/");
+
     }
 
     @AfterTest
