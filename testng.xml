@@ -6,6 +6,8 @@
         <classes>
             <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
+            <class name="tests.CheckboxesTest" />
+            <class name="tests.DropdownTest" />
         </classes>
     </test>  <!-- Test -->
     <test thread-count="5" name="SafariTest">
@@ -13,6 +15,8 @@
         <classes>
             <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
+            <class name="tests.CheckboxesTest" />
+            <class name="tests.DropdownTest" />
         </classes>
     </test>  <!-- Test -->
     <test thread-count="5" name="EdgeTest">
@@ -20,7 +24,8 @@
         <classes>
             <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
-            <class name="tests.BasicAuthTest" />
+            <class name="tests.CheckboxesTest" />
+            <class name="tests.DropdownTest" />
         </classes>
     </test>  <!-- Test  -->
     <test thread-count="5" name="ChromeTest">
@@ -28,7 +33,8 @@
         <classes>
             <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
-            <class name="tests.BasicAuthTest" />
+            <class name="tests.CheckboxesTest" />
+            <class name="tests.DropdownTest" />
         </classes>
     </test>  <!-- Test  -->
 </suite> <!-- Suite  -->
