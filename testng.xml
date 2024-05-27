@@ -20,6 +20,7 @@
         <classes>
             <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
+            <class name="tests.BasicAuthTest" />
         </classes>
     </test>  <!-- Test  -->
     <test thread-count="5" name="ChromeTest">
@@ -27,6 +28,7 @@
         <classes>
             <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
+            <class name="tests.BasicAuthTest" />
         </classes>
     </test>  <!-- Test  -->
 </suite> <!-- Suite  -->

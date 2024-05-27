@@ -8,8 +8,7 @@ public class LoginPage {
     private WebDriver driver;
     private By userName = By.id("user-name");
     private By passwordField = By.id("password");
-    private By logInButton =
-            By.id("login-button");
+    private By logInButton = By.id("login-button");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
