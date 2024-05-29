@@ -26,7 +26,6 @@ public class DragAndDropTest extends BaseTests {
         assertEquals(dragAndDropPage.getHeaderA(), "B");
         assertEquals(dragAndDropPage.getHeaderB(), "A");
 
-
     }
 
 }

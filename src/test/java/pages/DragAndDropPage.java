@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class DragAndDropPage {
 
@@ -25,6 +29,9 @@ public class DragAndDropPage {
         WebElement blockB = driver.findElement(objectB);
 
         actions.dragAndDrop(blockA, blockB).build().perform();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
     }
 
     public String getHeaderA () {

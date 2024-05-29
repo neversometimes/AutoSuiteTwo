@@ -39,7 +39,7 @@ public class BaseTests {
             throw new Exception("Incorrect Browser");
         }
 */
-         driver = new ChromeDriver();  // temporary
+         driver = new EdgeDriver();  // temporary
 
 
     }
