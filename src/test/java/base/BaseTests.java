@@ -9,8 +9,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.*;
 
-import java.time.Duration;
-
 public class BaseTests {
 
     protected WebDriver driver;
@@ -24,9 +22,9 @@ public class BaseTests {
     }
 
     @BeforeMethod
-    //@Parameters("browser")
-    public void setup() throws Exception {  // "String browser" as setup parameters
-/*
+    @Parameters("browser")
+    public void setup(String browser) throws Exception {  // "String browser" as setup parameters
+
         if (browser.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
@@ -38,9 +36,8 @@ public class BaseTests {
         } else {
             throw new Exception("Incorrect Browser");
         }
-*/
-         driver = new ChromeDriver();  // temporary
 
+         // driver = new FirefoxDriver();  // used while developing tests
 
     }
 
