@@ -17,10 +17,11 @@ public class NotificatonMsgTest extends BaseTests {
         // click link to target page (generates notification message top of page)
         notificationMsgPage.clickLoadNewMsgLink();
 
-        // verfiy notification message is displayed
+        // verify notification message is displayed
         assertTrue(notificationMsgPage.isNotificationMsgDisplayed());
 
-        // *** NOTE ***
-        // Not possible to verify the message text
+        // verify notification message is not blank
+        assertFalse(notificationMsgPage.isNotificationMsgBlank());
+
     }
 }
