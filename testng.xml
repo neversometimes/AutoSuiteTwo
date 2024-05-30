@@ -4,37 +4,81 @@
     <test thread-count="5" name="FirefoxTest">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
             <class name="tests.CheckboxesTest" />
+            <class name="tests.ContextMenuTest" />
+
             <class name="tests.DropdownTest" />
+            <class name="tests.DynamicControlsTest" />
+            <class name="tests.FloatingMenuTest" />
+            <class name="tests.HorizSliderTest" />
+            <class name="tests.HoverTest" />
+            <class name="tests.InfiniteScrollTest" />
+            <class name="tests.JQueryUITest" />
+            <class name="tests.JSAlertsTest" />
+            <class name="tests.LoginTest" />
+            <class name="tests.NewWindowTest" />
+            <class name="tests.NotificatonMsgTest" />
         </classes>
     </test>  <!-- Test -->
     <test thread-count="5" name="SafariTest">
         <parameter name="browser" value="safari" />
         <classes>
-            <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
             <class name="tests.CheckboxesTest" />
+
+
             <class name="tests.DropdownTest" />
+            <class name="tests.DynamicControlsTest" />
+            <class name="tests.FloatingMenuTest" />
+            <class name="tests.HorizSliderTest" />
+            <class name="tests.HoverTest" />
+            <class name="tests.InfiniteScrollTest" />
+            <class name="tests.JQueryUITest" />
+
+            <class name="tests.LoginTest" />
+            <class name="tests.NewWindowTest" />
+            <class name="tests.NotificatonMsgTest" />
         </classes>
     </test>  <!-- Test -->
     <test thread-count="5" name="EdgeTest">
         <parameter name="browser" value="edge" />
         <classes>
-            <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
             <class name="tests.CheckboxesTest" />
+            <class name="tests.ContextMenuTest" />
+            <class name="tests.DragAndDropTest" />
             <class name="tests.DropdownTest" />
+            <class name="tests.DynamicControlsTest" />
+            <class name="tests.FloatingMenuTest" />
+            <class name="tests.HorizSliderTest" />
+            <class name="tests.HoverTest" />
+            <class name="tests.InfiniteScrollTest" />
+            <class name="tests.JQueryUITest" />
+            <class name="tests.JSAlertsTest" />
+            <class name="tests.LoginTest" />
+            <class name="tests.NewWindowTest" />
+            <class name="tests.NotificatonMsgTest" />
         </classes>
     </test>  <!-- Test  -->
     <test thread-count="5" name="ChromeTest">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="tests.LoginTest" />
             <class name="tests.AddRemoveTest" />
             <class name="tests.CheckboxesTest" />
+            <class name="tests.ContextMenuTest" />
+            <class name="tests.DragAndDropTest" />
             <class name="tests.DropdownTest" />
+            <class name="tests.DynamicControlsTest" />
+            <class name="tests.FloatingMenuTest" />
+            <class name="tests.HorizSliderTest" />
+            <class name="tests.HoverTest" />
+            <class name="tests.InfiniteScrollTest" />
+            <class name="tests.JQueryUITest" />
+            <class name="tests.JSAlertsTest" />
+            <class name="tests.LoginTest" />
+            <class name="tests.NewWindowTest" />
+            <class name="tests.NotificatonMsgTest" />
         </classes>
     </test>  <!-- Test  -->
 </suite> <!-- Suite  -->
