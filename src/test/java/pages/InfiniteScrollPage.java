@@ -10,7 +10,6 @@ import java.time.Duration;
 public class InfiniteScrollPage {
 
     private WebDriver driver;
-    private By lastInitPara = By.xpath("//div[@class='jscroll-added'][2]");
     private By thePara = By.className("jscroll-added");
 
     public InfiniteScrollPage (WebDriver driver) {
@@ -20,7 +19,7 @@ public class InfiniteScrollPage {
     public void scrollPage() {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(lastInitPara));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(thePara));
 
         Actions actions = new Actions(driver);
 
