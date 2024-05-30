@@ -15,7 +15,7 @@ public class JQueryUiPage {
     private By menuEnabled = By.linkText("Enabled");
     private By menuDownloads = By.linkText("Downloads");
     private By menuBack = By.linkText("Back to JQuery UI");
-    private By headerText = By.xpath("//h3");
+    private By headerText = By.tagName("h3");
     private By goBackLink = By.linkText("Menu");
 
     public JQueryUiPage(WebDriver driver) {
@@ -59,6 +59,10 @@ public class JQueryUiPage {
     }
 
     public String getHeaderText() {
+        // wait for page to navigate before getting header text
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.urlToBe("https://the-internet.herokuapp.com/jqueryui"));
+
         return driver.findElement(headerText).getText();
     }
 
