@@ -5,7 +5,7 @@ import pages.NotificationMsgPage;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class NotificatonMsgTest extends BaseTests {
+public class NotificationMsgTest extends BaseTests {
 
     @Test
     public void verifyNotificationMsgs() {
