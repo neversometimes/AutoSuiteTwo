@@ -15,16 +15,16 @@ public class DragAndDropTest extends BaseTests {
         DragAndDropPage dragAndDropPage = new DragAndDropPage(driver);
 
         // verify object A is on the left and object B is on the right
-        assertEquals(dragAndDropPage.getHeaderA(), "A");
-        assertEquals(dragAndDropPage.getHeaderB(), "B");
+        assertEquals(dragAndDropPage.getHeaderATxt(), "A");
+        assertEquals(dragAndDropPage.getHeaderBTxt(), "B");
 
         // grab the object A and drop it on top of B
         dragAndDropPage.dragAtoB();
 
         // verify object A moved to spot of object B
         // AND object B moved to spot of object A
-        assertEquals(dragAndDropPage.getHeaderA(), "B");
-        assertEquals(dragAndDropPage.getHeaderB(), "A");
+        assertEquals(dragAndDropPage.getHeaderATxt(), "B");
+        assertEquals(dragAndDropPage.getHeaderBTxt(), "A");
 
     }
 
