@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MobileTest"  >
+    <test thread-count="5" name="MobileTest">
+        <parameter name="browser" value="mobileChrome" />
+        <classes>
+            <class name="tests.AddRemoveTest" />
+            <class name="tests.CheckboxesTest" />
+            <!-- <class name="tests.ContextMenuTest" />         No Context Menus On Mobile -->
+            <!-- <class name="tests.DragAndDropTest" />         No drag and drop on Mobile -->
+            <class name="tests.DropdownTest" />
+            <class name="tests.DynamicControlsTest" />
+            <!-- <class name="tests.FloatingMenuTest" />        Test includes scrolling - not applicable on Mobile -->
+            <class name="tests.HorizSliderTest" />
+            <!-- <class name="tests.HoverTest" />               No concept of Hover on Mobile -->
+            <!-- <class name="tests.InfiniteScrollTest" />      No scrolling on Mobile - only swiping -->
+            <class name="tests.JQueryUITest" />
+            <class name="tests.JSAlertsTest" />
+            <class name="tests.LoginTest" />
+            <class name="tests.NewWindowTest" />
+            <class name="tests.NotificationMsgTest" />
+        </classes>
+    </test>
+</suite>
