@@ -4,11 +4,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
-
 import java.time.Duration;
+import java.util.HashMap;
 
 public class BaseTests {
 
@@ -31,7 +32,10 @@ public class BaseTests {
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
-        } else {
+        } else if (browser.equalsIgnoreCase("mobileChrome")) {
+            driver = setupMobile();
+        }
+        else {
             throw new Exception("Incorrect Browser");
         }
 
@@ -43,4 +47,14 @@ public class BaseTests {
     public void teardown() {
         driver.quit();
     }
+
+    public WebDriver setupMobile() {
+        HashMap<String, String> mobileEmulation = new HashMap<>();
+        mobileEmulation.put("deviceName", "iPhone SE");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+        return new ChromeDriver(chromeOptions);
+
+    }
+
 }
